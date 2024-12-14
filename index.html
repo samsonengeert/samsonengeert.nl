@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>samson &amp; geert</title>
+    <meta name="description" content="Satirical humouristic websites made by a twelve year old.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header><h1>Samson &amp; Geert</h1>
+    <h3>yesssssssssssssssssssssssssssss</h3>
+</header>
+<!--<a href='/[folder]'>-->
+<!--    <span><b>/</b>[folder]</span>-->
+<!--    <div></div>-->
+<!--    <section></section>-->
+<!--</a>-->
+<p>S&G 2017</p>
+</body>
+</html>
+<script>
+    const divElements = document.getElementsByTagName('div')
+
+    const colorArray = [
+        [181, 63, 63],
+        [179, 63, 181],
+        [63, 81, 181],
+        [63, 181, 181],
+        [81, 181, 63],
+        [181, 172, 63]
+    ]
+
+    /**
+     * @param {number} milliseconds
+     * @return {Promise<void>}
+     */
+    function sleep(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds))
+    }
+
+    /**
+     * @param {number[][]} colors
+     * @param {HTMLCollectionOf<HTMLElement>} elements
+     * @return {Promise<void>}
+     */
+    async function runColorReel(colors, elements) {
+        while (true) {
+            for (const [red, green, blue] of colors) {
+                for (const element of elements) {
+                    element.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, 0.15)`
+                }
+                await sleep(1000)
+            }
+            await sleep(1000)
+        }
+    }
+
+    runColorReel(colorArray, divElements)
+</script>
+<style>
+body {
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+h3 {
+    opacity: .4;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+a {
+    display: table;
+    margin: 7px 0 5px;
+    text-decoration: none;
+    color: #222;
+    padding: 5px 0 0 0;
+    position: relative;
+}
+
+b {
+    font-size: 1.2rem;
+    line-height: 0;
+    margin: 0 1px 0 0;
+    vertical-align: middle;
+}
+
+div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: background-color 2s;
+}
+
+section {
+    height: 2px;
+    background-color: #222;
+    margin: 4px 0 0 0;
+    width: 50%;
+    transition: .2s ease-in-out;
+}
+
+a:hover section, a:active section {
+    width: 100%;
+}
+
+a:hover div, a:active div {
+    opacity: 1;
+}
+
+p {
+    font-size: 0.7rem;
+    opacity: .4;
+}
+</style>
