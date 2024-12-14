@@ -1,2 +1,2 @@
 # Samson & Geert
-Samson &amp; Geert will live on forever
+Satirical humouristic websites made by a twelve year old.
