@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+body {
+    height: 100vh;
+    cursor: url('assets/image/baguette.png'), auto;
+}
+
+.transition {
+    transition: opacity 1.5s ease-out;
+    -webkit-transition: opacity 1.5s ease-out;
+    -moz-transition: opacity 1.5s ease-out;
+    -o-transition: opacity 1.5s ease-out;
+}
+
+.part {
+    width: 33.3333%;
+    position: relative;
+}
+
+.flag {
+    height: 100%;
+    display: inline-flex;
+    width: 100%;
+}
+
+.blue {
+    background-color: #002094;
+}
+
+.white {
+    background-color: #fafafa;
+}
+
+.red {
+    background-color: #ed2636;
+}
+
+.color,
+.photo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.color {
+    opacity: 1;
+    z-index: 3;
+    background-color: inherit;
+}
+
+.color:hover {
+    opacity: 0.7;
+}
+
+.photo {
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+}
+
+.part.blue > .photo {
+    background-image: url('assets/image/trijntje.jpg');
+}
+
+.part.white > .photo {
+    background-image: url('assets/image/xander.jpg');
+}
+
+.part.red > .photo {
+    background-image: url('assets/image/djmartijn.jpg');
+}
