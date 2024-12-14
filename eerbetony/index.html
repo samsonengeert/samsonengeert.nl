@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>R.I.P - The legend</title>
+    <link rel="shortcut icon" type="image/gif" href="favicon.gif">
+</head>
+<body>
+    <img class="background" src="riplegend.png" alt="background"/>
+    <audio id="liedje" src="enya.mp3" autoplay loop></audio>
+    <button id="knopje" class="uit" type="button"></button>
+</body>
+</html>
+<style>
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    div {
+        display: block;
+    }
+
+    button:focus {
+        outline: 0;
+    }
+
+    body {
+        margin: 0;
+        background: #4b4f5a;
+    }
+
+    .background {
+        position: absolute;
+        height: auto;
+        width: 100%;
+    }
+
+    #knopje {
+        background-image: url('sound.png');
+        height: 23px;
+        width: 20px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    #knopje.uit {
+        background-image: url('sound-uit.png');
+    }
+</style>
+<script>
+    const button = document.getElementById('knopje')
+    const audio = document.getElementById('liedje')
+
+    audio.onplay = () => {
+        button.classList.remove('uit')
+    }
+
+    audio.onpause = () => {
+        button.classList.add('uit')
+    }
+
+    button.onclick = () => {
+        audio.paused ? audio.play() : audio.pause()
+    }
+</script>
