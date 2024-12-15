@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title data-fr-text="non!">neen!</title>
+</head>
+<body>
+    <section>
+        <p class="transition hidden" data-has-animation data-fr-text="non!">Neen!</p>
+        <p class="transition hidden" data-has-animation data-fr-text="non!">Neen!</p>
+        <p class="neen">
+            <span class="transition hidden" data-has-animation data-has-dynamic-color>3</span><span class="transition hidden short" data-has-animation data-has-dynamic-color data-fr-text="fois">werf</span><span class="transition hidden short" data-has-animation data-has-dynamic-color data-fr-text="non!">neen!</span></p>
+        <div class="bw">
+            <div id="refresh" class="transition hidden" data-has-animation data-has-dynamic-color>f5</div><div id="back" class="transition hidden short" data-has-animation data-has-dynamic-color data-fr-text="dos">terug</div>
+        </div>
+    </section>
+<a data-fr-href="./" href="?fr=oui" class="fr transition hidden short" data-has-animation data-has-dynamic-color data-fr-text="NL">fR</a>
+</body>
+</html>
+<style>
+a {
+    text-decoration: none;
+}
+
+body, section * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+section p {
+    font-size: 2.5em;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+}
+
+section .neen * {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+section .neen *:nth-of-type(3) {
+    margin-right: 0;
+}
+
+.transition {
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    transition-property: transform, text-shadow, box-shadow, top, left;
+    -webkit-transition-property: transform, text-shadow, box-shadow, top, left;
+    -moz-transition-property: transform, text-shadow, box-shadow, top, left;
+    -o-transition-property: transform, text-shadow, box-shadow, top, left;
+}
+
+.hidden {
+    transform: scale(0);
+    }
+
+.bw > div,
+.fr {
+    position: relative;
+    top: -5px;
+    width: calc(50% - 52px);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15), inset 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 6px solid;
+    text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.fr {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 1.7rem;
+    padding: 0.5rem 0.5rem;
+    text-transform: none;
+}
+
+.bw > div:first-child {
+    margin-right: 1rem;
+}
+
+.bw > div:hover,
+.bw > div:active,
+.fr:hover,
+.fr:active {
+    text-shadow: none;
+    box-shadow: none;
+    top: 0;
+}
+
+.fr:hover,
+.fr:active {
+    top: 1.3rem;
+}
+
+.bw {
+    margin-top: 2rem;
+}
+</style>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+
+    const r = getRandomInt(0, 255)
+    const g = getRandomInt(0, 255)
+    const b = getRandomInt(0, 255)
+    const color = `rgb(${r}, ${g}, ${b})`
+    const colorAlpha = `rgba(${r}, ${g}, ${b}, 0.1)`
+
+    const refresh = document.getElementById('refresh')
+    const back = document.getElementById('back')
+    const elementsWithAnimation = document.querySelectorAll('*[data-has-animation]')
+    const colorElements = document.querySelectorAll('*[data-has-dynamic-color]')
+    const backgroundColorElement = document.getElementsByTagName('body')[0]
+    const elementsWithFrText = document.querySelectorAll('*[data-fr-text]')
+    const elementsWithFrHref = document.querySelectorAll('*[data-fr-href]')
+
+    const urlParams = new URLSearchParams(window.location.search)
+    const fr = urlParams.get('fr')
+
+    if (fr === 'oui') {
+        for (const elementWithFr of elementsWithFrText) {
+            elementWithFr.innerText = elementWithFr.getAttribute('data-fr-text')
+        }
+
+        for (const elementWithFrHref of elementsWithFrHref) {
+            elementWithFrHref.href = elementWithFrHref.getAttribute('data-fr-href')
+        }
+    }
+
+    refresh.onclick = () => {
+        location.reload()
+    }
+
+    back.onclick = () => {
+        history.go(-1)
+    }
+
+    backgroundColorElement.style.backgroundColor = colorAlpha
+
+    for (const colorElement of colorElements) {
+        colorElement.style.color = color
+    }
+
+    let delay = 0
+
+    for (const elementWithAnimation of elementsWithAnimation) {
+        if (elementWithAnimation.classList.contains('short')) {
+            delay += 0.25
+        } else {
+            delay += 0.5
+        }
+
+        elementWithAnimation.style.transitionDelay = `${delay}s`
+    }
+
+    setTimeout(() => {
+        for (const elementWithAnimation of elementsWithAnimation) {
+            elementWithAnimation.classList.remove('hidden')
+        }
+    }, 50)
+
+    setTimeout(() => {
+        for (const elementWithAnimation of elementsWithAnimation) {
+            elementWithAnimation.style.transitionDelay = ''
+        }
+    }, delay * 1000)
+</script>
