@@ -1,0 +1,161 @@
+div, li, ul, img, h1, h2, h3, h4, h5, h6, a, audio, video, span, td, body, html {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 0;
+}
+
+.transition-05s {
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+}
+
+body {
+    background-size: cover;
+    min-width: 262px;
+}
+
+.key {
+    height: 70px;
+    width: 70px;
+    background-image: url('key.png');
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.winning-wrapper {
+    text-align: center;
+}
+
+.winning-box {
+    padding: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    top: 50vh;
+    z-index: 9999;
+}
+
+.winning-text {
+    font-size: 60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.winning-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.knopje {
+    background-image: url('sound.png');
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.knopje:hover {
+    opacity: 0.9;
+}
+
+.knopje.uit {
+    background-image: url('sound-uit.png');
+}
+
+/* text resize */
+
+@media (max-width: 1192px) {
+    .winning-text {
+    font-size: 50px;
+}
+    .key {
+    height: 60px;
+    width: 60px;
+}
+}
+
+@media (max-width: 1004px) {
+    .winning-text {
+    font-size: 40px;
+}
+    .key {
+    height: 50px;
+    width: 50px;
+}
+}
+
+@media (max-width: 815px) {
+    .winning-text {
+    font-size: 30px;
+}
+    .key {
+    height: 40px;
+    width: 40px;
+}
+    .winning-box {
+    padding: 15px;
+}
+}
+
+@media (max-width: 626px) {
+    .winning-text {
+    font-size: 20px;
+}
+    .key {
+    height: 30px;
+    width: 30px;
+}
+}
+
+@media (max-width: 440px) {
+    .winning-text {
+    font-size: 11px;
+}
+    .key {
+    height: 20px;
+    width: 20px;
+}
+    .winning-box {
+    padding: 10px;
+}
+}
+.lang-switch {
+    margin-left: 3px;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+}
+
+.lang-switch:hover {
+    color: rgba(255, 255, 255, 0.9); 
+}
+
+.control-wrapper {
+    position: absolute;
+    padding: 4px 5px 5px 5px;;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-right-radius: 4px;
+    opacity: 0.3;
+}
+
+.control-wrapper:hover {
+    opacity: 1;
+}
