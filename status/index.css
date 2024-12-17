@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    font-family: sans-serif;
+    color: #f7f7f7;
+}
+
+h1 {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 40px;
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+.icon {
+    fill: #f7f7f7;
+}
+
+.wrapper {
+    max-width: 550px;
+    margin: auto;
+    padding: 15px;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+}
+
+.indicator.offline {
+    background-color: #FF284F;
+}
+
+.indicator.online {
+    background-color: #19FF60;
+}
+
+.server {
+    padding: 15px 0;
+    border-bottom: 1px solid #272727;
+}
+
+.server article {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.server ul {
+    margin-top: 10px;
+}
+
+.server .name {
+    font-size: 30px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.show-more {
+    margin-left: auto;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.show-more .icon {
+    transition: tranform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+}
+
+.rotate .icon {
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.info {
+    margin: 0 50px;
+    padding: 10px 0 0 0;
+    font-size: 17px;
+    border-top: 1px solid #272727;
+}
+
+.show-more:hover,
+.lang-switch:hover,
+.day-night:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.day-night {
+    height: 27px;
+    width: 27px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.lang-switch {
+    padding: 5px 7px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+footer {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+#moon {
+    display: none;
+}
+
+#sun {
+    display: block;
+}
+
+footer p {
+    margin-left: auto;
+    font-size: 14px;
+}
+
+body.light {
+    background-color: #f7f7f7;
+    color: #333
+}
+
+.light .icon {
+    fill: #333;
+}
+
+.light #moon {
+    display: block;
+}
+
+.light #sun {
+    display: none;
+}
+
+.light .server {
+    border-bottom: 1px solid #ededed;
+}
+
+.light .info {
+    border-top: 1px solid #ededed;
+}
+
+.light .show-more:hover,
+.light .day-night:hover,
+.light .lang-switch:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
