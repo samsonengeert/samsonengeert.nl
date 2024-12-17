@@ -1,0 +1,20 @@
+body {
+    margin: 1rem;
+    background-color: #fafaf6;
+    color: #292325;
+    font-family: sans-serif;
+}
+
+b,
+span {
+    color: #d4ab48;
+}
+
+img {
+    border-radius: 0.5rem;
+}
+
+.redacted {
+    background-color: #000000;
+    color: #000000;
+}
