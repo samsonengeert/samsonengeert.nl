@@ -127,7 +127,9 @@ const debtorFactory = new DebtorFactory(new DateFactory())
 const debtorsElement = document.getElementById('debtors')
 const totalElement = document.getElementById('total')
 
-const debtors = []
+const debtors = [
+    debtorFactory.create('The usual suspect', '2017-11-27', 46.43, 'Black Ops 3')
+]
 
 for (const debtor of debtors) {
     const debtorElement = createDebtorElement(debtor)
