@@ -228,10 +228,10 @@ function createMemeElement(meme) {
 
         await delay(100)
         copyLinkToastElement.classList.add('visible')
-        // await delay(5000)
-        // copyLinkToastElement.classList.remove('visible')
-        // await delay(100)
-        // copyLinkToastElement.remove()
+        await delay(5000)
+        copyLinkToastElement.classList.remove('visible')
+        await delay(100)
+        copyLinkToastElement.remove()
     }
 
     const wrapperElement = document.createElement('section')
