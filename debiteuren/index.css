@@ -1,9 +1,5 @@
-.transition-none * {
-    transition: none !important;
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
+:root {
+    font-size: 1.15rem;
 }
 
 a {
@@ -22,17 +18,17 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f7f7f7;
     color: #333;
-    padding: 10px;
-    max-width: 600px;
+    padding: 0.625rem;
+    max-width: 40rem;
     margin: auto;
-    min-width: 200px;
+    min-width: 20rem;
 }
 
 header {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: 3px 3px 20px rgba(0,0,0,0.02);
+    border-radius: 0.313rem;
+    box-shadow: 0.188rem 0.188rem 1.25rem rgba(0, 0, 0, 0.02);
     overflow: hidden;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     display: flex;
@@ -46,20 +42,19 @@ header {
 }
 
 .logo-word-mark span {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     position: absolute;
     left: 100%;
     z-index: 0;
     opacity: 1;
-    transition-property: left, opacity;
-    transition: 1s ease-in-out;
+    transition: left 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .logo-word-mark img {
-    height: 47px;
-    width: 47px;
-    padding: 14px;
+    height: 2.938rem;
+    width: 2.938rem;
+    padding: 0.875rem;
     pointer-events: none;
     background: linear-gradient(to right, white 70%, rgba(255, 255, 255, 0));
     z-index: 2;
@@ -67,19 +62,19 @@ header {
 }
             
 .debtor {
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.02);
+    padding: 0.625rem;
+    border-radius: 0.313rem;
+    box-shadow: 0.188rem 0.188rem 1.25rem rgba(0, 0, 0, 0.02);
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     -webkit-background-clip: padding-box;
-    -moz-background-clip:    padding;
-    background-clip:         padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .background {
@@ -103,8 +98,7 @@ header {
 .background::before {
     background-size: cover;
     z-index: -2;
-    transition-property: transform, filter;
-    transition: 1s ease-out;
+    transition: transform 1s ease-out, filter 1s ease-in-out;
 }
 
 .debtor.green > .background::after {
@@ -141,12 +135,12 @@ header {
 .debtor h2 {
     display: flex;
     background-color: white;
-    height: 78px;
-    width: 78px;
+    height: 4.875rem;
+    width: 4.875rem;
     border-radius: 9999px;
-    box-shadow: 3px 3px 20px rgba(0,0,0,0.2);
+    box-shadow: 0.188rem 0.188rem 1.25rem rgba(0, 0, 0, 0.02);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
     align-items: center;
     justify-content: center;
 }
@@ -157,28 +151,28 @@ header {
 
 .info h3 {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .info h4 {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 .info h5 {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-style: italic;
     font-weight: 600;
 }
 
 .info p {
-    font-size: 13px;
+    font-size: 0.813rem;
 }
 
 .totals {
-    padding: 13px 14px;
+    padding: 0.813rem 0.875rem;
     background: linear-gradient(to left, white 90%, rgba(255, 255, 255, 0));
-    font-size: 15px;
+    font-size: 0.938rem;
     z-index: 2;
     margin-left: auto;
 }
@@ -188,13 +182,13 @@ header {
 }
 
 .debtor.none {
-    background-color: #F5F5F5;
-    font-size: 16px;
+    background-color: #f5f5f5;
+    font-size: 1rem;
     text-align: center;
     justify-content: center;
 }
 
-@media (max-width: 330px) {
+@media (max-width: 21rem) {
     .logo-word-mark span {
         left: -200%;
         opacity: 0;
