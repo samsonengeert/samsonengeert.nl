@@ -1,0 +1,92 @@
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+}
+
+section p {
+    font-size: 2.5em;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.three-times {
+    display: flex;
+    gap: 1rem;
+}
+
+.transition {
+    transition: 0.5s ease;
+    transition-property: transform, text-shadow, box-shadow, top, left;
+}
+
+.hidden {
+    transform: scale(0);
+}
+
+.actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.actions > button,
+.fr {
+    position: relative;
+    top: -5px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15), inset 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 6px solid;
+    text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.fr {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 1.7rem;
+    padding: 0.5rem 0.5rem;
+    text-transform: none;
+}
+
+.actions > button:hover,
+.actions > button:active,
+.fr:hover,
+.fr:active {
+    text-shadow: none;
+    box-shadow: none;
+    top: 0;
+}
+
+.fr:hover,
+.fr:active {
+    top: 1.3rem;
+}
