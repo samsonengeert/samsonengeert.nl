@@ -1,3 +1,11 @@
+.transition-none * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -70,6 +78,7 @@ header {
     -moz-background-clip:    padding;
     background-clip:         padding-box;
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 

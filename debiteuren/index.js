@@ -127,6 +127,10 @@ const debtorFactory = new DebtorFactory(new DateFactory())
 const debtorsElement = document.getElementById('debtors')
 const totalElement = document.getElementById('total')
 
+window.addEventListener('load', () => {
+    document.body.classList.remove('transition-none')
+})
+
 const debtors = [
     debtorFactory.create('The usual suspect', '2017-11-27', 46.43, 'Black Ops 3')
 ]
