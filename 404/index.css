@@ -1,161 +1,182 @@
-div, li, ul, img, h1, h2, h3, h4, h5, h6, a, audio, video, span, td, body, html {
+:root {
+    font-size: 1rem;
+}
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-width: 25rem;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+h1,
+a,
+video,
+body,
+html,
+button {
     margin: 0;
     padding: 0;
     display: block;
     font-size: 0;
 }
 
-.transition-05s {
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    -ms-transition: 0.5s;
+.emoji {
+    height: 4.375rem;
+    width: 4.375rem;
 }
 
-body {
-    background-size: cover;
-    min-width: 262px;
-}
-
-.key {
-    height: 70px;
-    width: 70px;
-    background-image: url('key.png');
-    background-size: cover;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.winning-wrapper {
-    text-align: center;
-}
-
-.winning-box {
-    padding: 20px;
+.caption {
+    padding: 1.875rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     position: relative;
-    top: 50vh;
-    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 65vh;
+    gap: 0.313rem;
 }
 
-.winning-text {
-    font-size: 60px;
-    display: inline-block;
-    vertical-align: middle;
+.caption h1 {
+    font-size: 3.75rem;
 }
 
-.winning-video {
+video {
     position: fixed;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
-.knopje {
-    background-image: url('sound.png');
-    height: 20px;
-    width: 20px;
-    background-size: cover;
-    display: inline-block;
-    vertical-align: middle;
+.controls {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-right-radius: 0.313rem;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    opacity: 0.3;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.controls:hover {
+    opacity: 1;
+}
+
+.speaker {
+    height: 1.875rem;
+    width: 2.5rem;
     opacity: 0.7;
+    transition: opacity 0.5s ease-in-out;
     cursor: pointer;
+    padding: 0.313rem 0.625rem;
 }
 
-.knopje:hover {
+.speaker > svg {
+    height: 100%;
+    width: 100%;
+    fill: white;
+}
+
+.speaker:hover {
     opacity: 0.9;
 }
 
-.knopje.uit {
-    background-image: url('sound-uit.png');
+.speaker.off .soundwave {
+    display: none;
 }
 
-/* text resize */
-
-@media (max-width: 1192px) {
-    .winning-text {
-    font-size: 50px;
-}
-    .key {
-    height: 60px;
-    width: 60px;
-}
-}
-
-@media (max-width: 1004px) {
-    .winning-text {
-    font-size: 40px;
-}
-    .key {
-    height: 50px;
-    width: 50px;
-}
-}
-
-@media (max-width: 815px) {
-    .winning-text {
-    font-size: 30px;
-}
-    .key {
-    height: 40px;
-    width: 40px;
-}
-    .winning-box {
-    padding: 15px;
-}
-}
-
-@media (max-width: 626px) {
-    .winning-text {
-    font-size: 20px;
-}
-    .key {
-    height: 30px;
-    width: 30px;
-}
-}
-
-@media (max-width: 440px) {
-    .winning-text {
-    font-size: 11px;
-}
-    .key {
-    height: 20px;
-    width: 20px;
-}
-    .winning-box {
-    padding: 10px;
-}
-}
 .lang-switch {
-    margin-left: 3px;
-    font-size: 15px;
-    display: inline-block;
-    vertical-align: middle;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    color: #ffffff;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.7;
     font-weight: 600;
+    padding: 0.438rem 0.625rem 0.438rem 0;
 }
 
 .lang-switch:hover {
-    color: rgba(255, 255, 255, 0.9); 
+    opacity: 0.9;
 }
 
-.control-wrapper {
-    position: absolute;
-    padding: 4px 5px 5px 5px;;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-bottom-right-radius: 4px;
-    opacity: 0.3;
+@media (max-width: 74.5rem) {
+    .caption h1 {
+        font-size: 3.125rem;
+    }
+
+    .emoji {
+        height: 3.75rem;
+        width: 3.75rem;
+    }
 }
 
-.control-wrapper:hover {
-    opacity: 1;
+@media (max-width: 62.75rem) {
+    .caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .emoji {
+        height: 3.125rem;
+        width: 3.125rem;
+    }
+}
+
+@media (max-width: 50.938rem) {
+    .caption h1 {
+        font-size: 1.875rem;
+    }
+
+    .emoji {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .caption {
+        padding: 0.938rem;
+    }
+}
+
+@media (max-width: 39.125rem) {
+    .caption h1 {
+        font-size: 1.25rem;
+    }
+
+    .emoji {
+        height: 1.875rem;
+        width: 1.875rem;
+    }
+}
+
+@media (max-width: 27.5rem) {
+    .caption h1 {
+        font-size: 1.063rem;
+    }
+
+    .emoji {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+
+    .caption {
+        padding: 0.625rem;
+    }
 }

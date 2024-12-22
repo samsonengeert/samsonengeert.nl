@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search)
 
-const soundToggle = document.getElementById('soundToggle')
+const speaker = document.getElementById('speaker')
 const video = document.getElementById('video')
 const elementsWithFrText = document.querySelectorAll('*[data-fr-text]')
 const elementsWithFrHref = document.querySelectorAll('*[data-fr-href]')
@@ -17,12 +17,12 @@ if (fr === 'oui') {
     }
 }
 
-soundToggle.onclick = () => {
+speaker.onclick = () => {
     video.muted = !video.muted
 
     if (video.muted) {
-        soundToggle.classList.add('uit')
+        speaker.classList.add('off')
     } else {
-        soundToggle.classList.remove('uit')
+        speaker.classList.remove('off')
     }
 }
