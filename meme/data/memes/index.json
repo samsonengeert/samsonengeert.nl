@@ -1,0 +1,54 @@
+{
+  "memes": [
+    {
+      "name": "armart-wevers",
+      "color": "#340e01",
+      "type": "jpg"
+    },
+    {
+      "name": "brokkelkoning",
+      "color": "#ffffff",
+      "type": "jpg"
+    },
+    {
+      "name": "dolfijntje",
+      "color": "#5a9198",
+      "type": "jpg"
+    },
+    {
+      "name": "jim-helm",
+      "color": "#2c4409",
+      "type": "jpg"
+    },
+    {
+      "name": "julian",
+      "color": "#72765f",
+      "type": "jpg"
+    },
+    {
+      "name": "triggered-tony",
+      "color": "#050403",
+      "type": "gif"
+    },
+    {
+      "name": "ruben-werksituatie",
+      "color": "#ffffff",
+      "type": "jpg"
+    },
+    {
+      "name": "tony-leeuw",
+      "color": "#659a27",
+      "type": "jpg"
+    },
+    {
+      "name": "tony-holy-trinity",
+      "color": "#e5e9de",
+      "type": "png"
+    },
+    {
+      "name": "mart-werkervaring",
+      "color": "#b8b8ff",
+      "type": "jpg"
+    }
+  ]
+}
