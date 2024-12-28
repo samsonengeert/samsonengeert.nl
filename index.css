@@ -1,0 +1,68 @@
+body {
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+h3 {
+    opacity: .4;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+a {
+    display: table;
+    margin: 7px 0 5px;
+    text-decoration: none;
+    color: #222;
+    padding: 5px 0 0 0;
+    position: relative;
+}
+
+b {
+    font-size: 1.2rem;
+    line-height: 0;
+    margin: 0 1px 0 0;
+    vertical-align: middle;
+}
+
+div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: background-color 2s;
+}
+
+section {
+    height: 2px;
+    background-color: #222;
+    margin: 4px 0 0 0;
+    width: 50%;
+    transition: .2s ease-in-out;
+}
+
+a:hover section,
+a:active section {
+    width: 100%;
+}
+
+a:hover div,
+a:active div {
+    opacity: 1;
+}
+
+p {
+    font-size: 0.7rem;
+    opacity: .4;
+}
