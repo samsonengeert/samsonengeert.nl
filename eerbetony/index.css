@@ -1,0 +1,162 @@
+:root {
+    font-size: 1rem;
+}
+
+@font-face {
+    font-family: ClassicRaw;
+    src: url('ClassicRaw.ttf');
+}
+
+@font-face {
+    font-family: Majalla;
+    src: url('majalla.ttf');
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    background: #0b1520;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    min-width: 25rem;
+}
+
+.background {
+    overflow: hidden;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+#speaker {
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+    fill: #b8bcc4;
+}
+
+#speaker.off .soundwave {
+    display: none;
+}
+
+.memorial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #b8bcc4;
+    fill: #b8bcc4;
+    margin: 0 2rem 10rem 2rem;
+    z-index: 10;
+}
+
+.title {
+    font-family: Majalla, serif;
+    font-size: 7rem;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1;
+}
+
+.nickname {
+    font-family: ClassicRaw, serif;
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.name {
+    font-family: ClassicRaw, serif;
+    font-weight: normal;
+    margin: 2rem 0 1rem 0;
+    font-size: 3.4rem;
+    font-style: italic;
+}
+
+.message {
+    font-family: ClassicRaw, serif;
+    font-weight: normal;
+    margin: 0;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.dates {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.date {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.date p {
+    font-family: Majalla, serif;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.date svg {
+    height: 2rem;
+}
+
+.summoners-rift {
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    overflow: hidden;
+    max-height: 56.25rem;
+    width: 100%;
+    max-width: max-content;
+    mix-blend-mode: plus-lighter;
+    min-width: 56.25rem;
+    opacity: 0.7;
+}
+
+.champions {
+    top: -10.313rem;
+    display: flex;
+    position: relative;
+    fill: #0b1520;
+    width: 100%;
+    max-width: 100rem;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: flex-start;
+    min-width: 31.25rem;
+}
+
+@media (min-width: 62.5rem) {
+    .champions {
+        top: -12.5rem;
+    }
+}
+
+@media (min-width: 75rem) {
+    .champions {
+        top: -18.75rem;
+    }
+}
+
+@media (min-width: 100rem) {
+    .champions {
+        top: -25rem;
+    }
+}
