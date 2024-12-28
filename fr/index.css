@@ -6,14 +6,8 @@
 
 body {
     height: 100vh;
-    cursor: url('assets/image/baguette.png'), auto;
-}
-
-.transition {
-    transition: opacity 1.5s ease-out;
-    -webkit-transition: opacity 1.5s ease-out;
-    -moz-transition: opacity 1.5s ease-out;
-    -o-transition: opacity 1.5s ease-out;
+    cursor: url('baguette.png'), auto;
+    background-color: #fafafa;
 }
 
 .part {
@@ -22,8 +16,8 @@ body {
 }
 
 .flag {
+    display: flex;
     height: 100%;
-    display: inline-flex;
     width: 100%;
 }
 
@@ -39,37 +33,39 @@ body {
     background-color: #ed2636;
 }
 
-.color,
-.photo {
+.part:before,
+.part:after {
+    content: "";
     height: 100%;
     width: 100%;
     position: absolute;
 }
 
-.color {
+.part:before {
+    transition: opacity 1.5s ease-out;
     opacity: 1;
     z-index: 3;
     background-color: inherit;
 }
 
-.color:hover {
+.part:hover::before {
     opacity: 0.7;
 }
 
-.photo {
+.part:after {
     z-index: 2;
     background-size: cover;
     background-position: center;
 }
 
-.part.blue > .photo {
-    background-image: url('assets/image/trijntje.jpg');
+.part.blue::after {
+    background-image: url('trijntje.jpg');
 }
 
-.part.white > .photo {
-    background-image: url('assets/image/xander.jpg');
+.part.white::after {
+    background-image: url('xander.jpg');
 }
 
-.part.red > .photo {
-    background-image: url('assets/image/djmartijn.jpg');
+.part.red::after {
+    background-image: url('djmartijn.jpg');
 }
