@@ -1,0 +1,10 @@
+{
+  "debtors": [
+    {
+      "name": "The usual suspect",
+      "dateString": "2017-11-27",
+      "amountInEuros": 46.43,
+      "reason": "Black Ops 3"
+    }
+  ]
+}
