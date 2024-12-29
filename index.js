@@ -21,7 +21,7 @@ function sleep(milliseconds) {
 
 /**
  * @param {number[][]} colors
- * @param {HTMLCollectionOf<HTMLElement>} elements
+ * @param {NodeListOf<HTMLElement>} elements
  * @return {Promise<void>}
  */
 async function runColorReel(colors, elements) {
@@ -49,22 +49,25 @@ function fetchSites() {
  */
 function createSiteElement(siteData) {
     const siteAnchorElement = document.createElement('a')
+    siteAnchorElement.classList.add('site')
     siteAnchorElement.href = siteData.href
 
-    const nameSpanElement = document.createElement('span')
+    const nameSectionElement = document.createElement('section')
+    nameSectionElement.classList.add('name')
 
     const slashBoldElement = document.createElement('b')
     slashBoldElement.innerText = '/'
 
-    const divElement = document.createElement('div')
+    const nameSpanElement = document.createElement('span')
+    nameSpanElement.innerText = siteData.name
 
-    const sectionElement = document.createElement('section')
+    const backgroundSectionElement = document.createElement('section')
+    backgroundSectionElement.classList.add('background')
 
-    siteAnchorElement.appendChild(nameSpanElement)
-    nameSpanElement.appendChild(slashBoldElement)
-    nameSpanElement.append(siteData.name)
-    siteAnchorElement.appendChild(divElement)
-    siteAnchorElement.appendChild(sectionElement)
+    siteAnchorElement.appendChild(nameSectionElement)
+    nameSectionElement.appendChild(slashBoldElement)
+    nameSectionElement.appendChild(nameSpanElement)
+    siteAnchorElement.appendChild(backgroundSectionElement)
 
     return siteAnchorElement
 }
@@ -86,7 +89,10 @@ fetchSites().then(response => {
         sitesElement.appendChild(siteElement)
     }
 
-    const divElements = document.getElementsByTagName('div')
+    /**
+     * @type {NodeListOf<HTMLElement>}
+     */
+    const backgroundElements = document.querySelectorAll('.background')
 
-    return runColorReel(colorArray, divElements)
+    return runColorReel(colorArray, backgroundElements)
 })
