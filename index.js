@@ -55,9 +55,6 @@ function createSiteElement(siteData) {
     const nameSectionElement = document.createElement('section')
     nameSectionElement.classList.add('name')
 
-    const slashBoldElement = document.createElement('b')
-    slashBoldElement.innerText = '/'
-
     const nameSpanElement = document.createElement('span')
     nameSpanElement.innerText = siteData.name
 
@@ -65,7 +62,6 @@ function createSiteElement(siteData) {
     backgroundSectionElement.classList.add('background')
 
     siteAnchorElement.appendChild(nameSectionElement)
-    nameSectionElement.appendChild(slashBoldElement)
     nameSectionElement.appendChild(nameSpanElement)
     siteAnchorElement.appendChild(backgroundSectionElement)
 
