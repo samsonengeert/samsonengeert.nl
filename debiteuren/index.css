@@ -18,17 +18,17 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f7f7f7;
     color: #333;
-    padding: 0.625rem;
+    padding: .625rem;
     max-width: 40rem;
     margin: auto;
     min-width: 20rem;
 }
 
 header {
-    margin-bottom: 0.625rem;
+    margin-bottom: .625rem;
     background-color: white;
-    border-radius: 0.313rem;
-    box-shadow: 0.188rem 0.188rem 1.25rem rgba(0, 0, 0, 0.02);
+    border-radius: .313rem;
+    box-shadow: .188rem .188rem 1.25rem rgba(0, 0, 0, .02);
     overflow: hidden;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     display: flex;
@@ -54,7 +54,7 @@ header {
 .logo-word-mark img {
     height: 2.938rem;
     width: 2.938rem;
-    padding: 0.875rem;
+    padding: .875rem;
     pointer-events: none;
     background: linear-gradient(to right, white 70%, rgba(255, 255, 255, 0));
     z-index: 2;
@@ -62,10 +62,10 @@ header {
 }
             
 .debtor {
-    padding: 0.625rem;
-    border-radius: 0.313rem;
-    box-shadow: 0.188rem 0.188rem 1.25rem rgba(0, 0, 0, 0.02);
-    margin-bottom: 10px;
+    padding: .625rem;
+    border-radius: .313rem;
+    box-shadow: .188rem .188rem 1.25rem rgba(0, 0, 0, .02);
+    margin-bottom: .625rem;
     position: relative;
     overflow: hidden;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
@@ -74,7 +74,7 @@ header {
     background-clip: padding-box;
     display: flex;
     align-items: center;
-    gap: 0.625rem;
+    gap: .625rem;
 }
 
 .background {
@@ -102,11 +102,11 @@ header {
 }
 
 .debtor.green > .background::after {
-    background-color: rgba(67, 226, 122, 0.9);
+    background-color: rgba(67, 226, 122, .9);
 }
 
 .debtor.red > .background::after {
-    background-color: rgba(255, 26, 88, 0.8);
+    background-color: rgba(255, 26, 88, .8);
 }
 
 .debtor.green > .background::before {
@@ -119,8 +119,7 @@ header {
 
 .debtor:hover > .background::before {
     transform: scale(1.1);
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
+    filter: blur(.125rem);
     
 }
 
@@ -137,8 +136,8 @@ header {
     background-color: white;
     height: 4.875rem;
     width: 4.875rem;
-    border-radius: 9999px;
-    box-shadow: 0.188rem 0.188rem 1.25rem rgba(0, 0, 0, 0.02);
+    border-radius: 9999rem;
+    box-shadow: .188rem .188rem 1.25rem rgba(0, 0, 0, .02);
     font-weight: 600;
     font-size: 1.25rem;
     align-items: center;
@@ -160,19 +159,19 @@ header {
 }
 
 .info h5 {
-    font-size: 0.75rem;
+    font-size: .75rem;
     font-style: italic;
     font-weight: 600;
 }
 
 .info p {
-    font-size: 0.813rem;
+    font-size: .813rem;
 }
 
 .totals {
-    padding: 0.813rem 0.875rem;
+    padding: .813rem .875rem;
     background: linear-gradient(to left, white 90%, rgba(255, 255, 255, 0));
-    font-size: 0.938rem;
+    font-size: .938rem;
     z-index: 2;
     margin-left: auto;
 }

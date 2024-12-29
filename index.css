@@ -1,0 +1,113 @@
+:root {
+    font-size: 1.35rem;
+}
+
+html {
+    min-width: 18.5rem;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: max-content;
+    margin: 1.25rem auto;
+    color: #f7f7f7;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 2.5rem);
+}
+
+header {
+    margin-bottom: 1.25rem;
+}
+
+h1,
+h3 {
+    margin: 0;
+}
+
+header h3 {
+    opacity: .4;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+main#sites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site {
+    display: block;
+    margin: .438rem 0 .313rem;
+    text-decoration: none;
+    color: inherit;
+    padding: .313rem 2rem 0 2rem;
+    position: relative;
+}
+
+b {
+    font-size: 1.2rem;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: background-color 2s;
+    z-index: -1;
+    border-radius: .3rem;
+}
+
+.site:after {
+    content: "";
+    display: block;
+    height: .125rem;
+    background-color: #f7f7f7;
+    margin: .25rem auto 0 auto;
+    width: 50%;
+    transition: .2s ease-in-out;
+    border-radius: 999rem;
+}
+
+.site:hover::after,
+.site:active::after {
+    width: 100%;
+}
+
+.site:hover .background,
+.site:active .background {
+    opacity: 1;
+}
+
+footer {
+    margin: auto 0 0 0;
+}
+
+footer p {
+    font-size: .7rem;
+    opacity: .4;
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+.name {
+    display: flex;
+    gap: .1rem;
+    align-items: center;
+}
+
+main:has(.site:hover) + .background.overlay {
+    opacity: .5;
+}
+
+.background.overlay {
+    transition: background-color 2s, opacity .5s ease-in-out;
+    border-radius: 100%;
+    filter: blur(10rem);
+}

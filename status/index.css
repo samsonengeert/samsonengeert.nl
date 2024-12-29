@@ -1,3 +1,7 @@
+:root {
+    font-size: 1rem;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -11,9 +15,9 @@ body {
 }
 
 h1 {
-    margin-bottom: 5px;
+    margin-bottom: .313rem;
     margin-top: 0;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 button {
@@ -40,15 +44,15 @@ p {
 }
 
 .wrapper {
-    max-width: 550px;
+    max-width: 34.375rem;
     margin: auto;
-    padding: 15px;
+    padding: .938rem;
 }
 
 .indicator {
-    width: 20px;
-    height: 20px;
-    border-radius: 9999px;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999rem;
 }
 
 .indicator.offline {
@@ -60,76 +64,73 @@ p {
 }
 
 .server {
-    padding: 15px 0;
-    border-bottom: 1px solid #272727;
+    padding: .938rem 0;
+    border-bottom: .063rem solid #272727;
 }
 
 .server article {
-    gap: 20px;
+    gap: 1.25rem;
     display: flex;
     align-items: center;
 }
 
 .server ul {
-    margin-top: 10px;
+    margin-top: .625rem;
 }
 
 .server .name {
-    font-size: 30px;
+    font-size: 1.875rem;
     margin: 0;
     font-weight: normal;
 }
 
 .show-more {
     margin-left: auto;
-    height: 30px;
-    width: 30px;
+    height: 1.875rem;
+    width: 1.875rem;
     cursor: pointer;
-    padding: 5px;
-    border-radius: 5px;
+    padding: .313rem;
+    border-radius: .313rem;
 }
 
 .show-more .icon {
-    transition: tranform 0.3s;
-    -webkit-transition: transform 0.3s;
-    -ms-transition: transform 0.3s;
+    transition: transform .3s;
 }
 
 .rotate .icon {
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .info {
-    margin: 0 50px;
-    padding: 10px 0 0 0;
-    font-size: 17px;
-    border-top: 1px solid #272727;
+    margin: 0 3.125rem;
+    padding: .625rem 0 0 0;
+    font-size: 1.063rem;
+    border-top: .063rem solid #272727;
 }
 
 .show-more:hover,
 .lang-switch:hover,
 .day-night:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, .1);
 }
 
 .day-night {
-    height: 27px;
-    width: 27px;
+    height: 1.688rem;
+    width: 1.688rem;
     cursor: pointer;
-    padding: 5px;
-    border-radius: 5px;
+    padding: .313rem;
+    border-radius: .313rem;
 }
 
 .lang-switch {
-    padding: 5px 7px;
-    border-radius: 5px;
+    padding: .313rem .438rem;
+    border-radius: .313rem;
     font-weight: bold;
-    font-size: 15px;
+    font-size: .938rem;
 }
 
 footer {
-    padding: 10px 0;
+    padding: .625rem 0;
     display: flex;
     align-items: center;
 }
@@ -144,7 +145,7 @@ footer {
 
 footer p {
     margin-left: auto;
-    font-size: 14px;
+    font-size: .875rem;
 }
 
 body.light {
@@ -165,15 +166,15 @@ body.light {
 }
 
 .light .server {
-    border-bottom: 1px solid #ededed;
+    border-bottom: .063rem solid #ededed;
 }
 
 .light .info {
-    border-top: 1px solid #ededed;
+    border-top: .063rem solid #ededed;
 }
 
 .light .show-more:hover,
 .light .day-night:hover,
 .light .lang-switch:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, .1);
 }

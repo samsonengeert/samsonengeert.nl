@@ -1,3 +1,7 @@
+:root {
+    font-size: 1rem;
+}
+
 body {
     margin: 1rem;
     background-color: #fafaf6;
@@ -11,7 +15,7 @@ span {
 }
 
 img {
-    border-radius: 0.5rem;
+    border-radius: .5rem;
 }
 
 .redacted {

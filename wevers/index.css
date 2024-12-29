@@ -1,3 +1,7 @@
+:root {
+    font-size: 1rem;
+}
+
 body {
     margin: 0;
     font-size: 0;
@@ -7,7 +11,7 @@ body {
 }
 
 span {
-    opacity: 0.7;
+    opacity: .7;
 }
 
 h3 {
@@ -16,11 +20,11 @@ h3 {
 }
 
 h3 > sup {
-    font-size: 0.4em;
+    font-size: .4em;
 }
 
 h3 > span {
-    font-size: 0.7em;
+    font-size: .7em;
 }
 
 ul {
@@ -34,8 +38,8 @@ li {
 }
 
 li > span {
-    font-size: 0.9em;
-    margin-right: 0.3em;
+    font-size: .9em;
+    margin-right: .3em;
 }
 
 h4 {
@@ -49,14 +53,9 @@ article {
 
 .the-great-weef {
     max-height: 69vh;
-    height: calc(100% - 176px);
     object-fit: contain;
     min-height: 39vh;
-    margin-top: 20px;
-}
-
-.the-great-text {
-    font-size: 15px;
+    margin-top: 1.25rem;
 }
 
 .the-great-section {
@@ -70,10 +69,10 @@ article {
 
 .sound {
     display: inline-block;
-    height: 0.6em;
-    width: 0.6em;
+    height: .6em;
+    width: .6em;
     cursor: pointer;
-    opacity: 0.7;
+    opacity: .7;
 }
 
 .sound:hover {
@@ -83,5 +82,5 @@ article {
 .sound > path {
     fill: white;
     stroke: white;
-    stroke-width: 5px;
+    stroke-width: .313rem;
 }

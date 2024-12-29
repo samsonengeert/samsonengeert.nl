@@ -44,13 +44,13 @@ button {
 .caption {
     padding: 1.875rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, .7);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 65vh;
-    gap: 0.313rem;
+    gap: .313rem;
 }
 
 .caption h1 {
@@ -69,11 +69,11 @@ video {
 
 .controls {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.313rem;
-    transition: opacity 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, .5);
+    border-bottom-right-radius: .313rem;
+    transition: opacity .5s ease-in-out;
     display: flex;
-    opacity: 0.3;
+    opacity: .3;
     align-items: center;
     justify-content: flex-start;
 }
@@ -85,10 +85,10 @@ video {
 .speaker {
     height: 1.875rem;
     width: 2.5rem;
-    opacity: 0.7;
-    transition: opacity 0.5s ease-in-out;
+    opacity: .7;
+    transition: opacity .5s ease-in-out;
     cursor: pointer;
-    padding: 0.313rem 0.625rem;
+    padding: .313rem .625rem;
 }
 
 .speaker > svg {
@@ -98,7 +98,7 @@ video {
 }
 
 .speaker:hover {
-    opacity: 0.9;
+    opacity: .9;
 }
 
 .speaker.off .soundwave {
@@ -106,16 +106,16 @@ video {
 }
 
 .lang-switch {
-    font-size: 0.875rem;
+    font-size: .875rem;
     color: #ffffff;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0.7;
+    transition: opacity .5s ease-in-out;
+    opacity: .7;
     font-weight: 600;
-    padding: 0.438rem 0.625rem 0.438rem 0;
+    padding: .438rem .625rem .438rem 0;
 }
 
 .lang-switch:hover {
-    opacity: 0.9;
+    opacity: .9;
 }
 
 @media (max-width: 74.5rem) {
@@ -151,7 +151,7 @@ video {
     }
 
     .caption {
-        padding: 0.938rem;
+        padding: .938rem;
     }
 }
 
@@ -177,6 +177,6 @@ video {
     }
 
     .caption {
-        padding: 0.625rem;
+        padding: .625rem;
     }
 }

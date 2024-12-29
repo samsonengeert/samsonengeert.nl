@@ -1,3 +1,18 @@
+/**
+ * @typedef {{
+ *     name: string,
+ *     dateString: string,
+ *     amountInEuros: number,
+ *     reason: string
+ * }} DebtorData
+ */
+
+/**
+ * @typedef {{
+ *     debtors: DebtorData[]
+ * }} DebtorDataIndexResponse
+ */
+
 class Debtor {
     /**
      * @type {string}
@@ -92,13 +107,13 @@ class DebtorFactory {
     /**
      * @param {string} name
      * @param {string} dateString
-     * @param {number} amount
+     * @param {number} amountInEuros
      * @param {string} reason
      * @return {Debtor}
      */
-    create(name, dateString, amount, reason) {
+    create(name, dateString, amountInEuros, reason) {
         const date = this.#dateFactory.create(dateString)
-        return new Debtor(name, date, amount, reason)
+        return new Debtor(name, date, amountInEuros, reason)
     }
 }
 
@@ -127,21 +142,28 @@ const debtorFactory = new DebtorFactory(new DateFactory())
 const debtorsElement = document.getElementById('debtors')
 const totalElement = document.getElementById('total')
 
-const debtors = [
-    debtorFactory.create('The usual suspect', '2017-11-27', 46.43, 'Black Ops 3')
-]
+fetchDebtors().then(response => {
+    /**
+     * @type {Debtor[]}
+     */
+    const debtors = []
+    for (const { name, dateString, amountInEuros, reason } of response.debtors) {
+        const debtor = debtorFactory.create(name, dateString, amountInEuros, reason)
+        debtors.push(debtor)
+    }
 
-for (const debtor of debtors) {
-    const debtorElement = createDebtorElement(debtor)
-    debtorsElement.append(debtorElement)
-}
+    for (const debtor of debtors) {
+        const debtorElement = createDebtorElement(debtor)
+        debtorsElement.append(debtorElement)
+    }
 
-if (debtors.length === 0) {
-    const noDebtorsFoundElement = createNoDebtorsFoundElement()
-    debtorsElement.append(noDebtorsFoundElement)
-}
+    if (debtors.length === 0) {
+        const noDebtorsFoundElement = createNoDebtorsFoundElement()
+        debtorsElement.append(noDebtorsFoundElement)
+    }
 
-totalElement.innerHTML = formatAmountInEuros(debtors.reduce((total, debtor) => total + debtor.amountInEuros, 0))
+    totalElement.innerHTML = formatAmountInEuros(debtors.reduce((total, debtor) => total + debtor.amountInEuros, 0))
+})
 
 function createNoDebtorsFoundElement() {
     const noDebtorsFoundElement = document.createElement('p')
@@ -160,18 +182,44 @@ function createDebtorElement(debtor) {
     debtorArticleElement.title = debtor.isSlob ? 'Sloeber' : 'Debiteur'
     debtorArticleElement.classList.add('debtor', debtor.isSlob ? 'red' : 'green')
 
-    debtorArticleElement.insertAdjacentHTML('beforeend', `
-    <h2>${formatAmountInEuros(debtor.amountInEuros)}</h2>
-    <section class='info'>
-        <h3>${debtor.name}</h3>
-        <h5>${formatDate(debtor.date)}</h5>
-        <article>
-            <h4>Reden:</h4>
-            <p>${debtor.reason}</p>
-        </article>
-    </section>
-    <section class='background'></section>
-    `)
+    const amountHeading2Element = document.createElement('h2')
+    amountHeading2Element.innerHTML = formatAmountInEuros(debtor.amountInEuros)
+
+    const infoSectionElement = document.createElement('section')
+    infoSectionElement.classList.add('info')
+
+    const nameHeading3Element = document.createElement('h3')
+    nameHeading3Element.innerText = debtor.name
+
+    const dateHeading5Element = document.createElement('h5')
+    dateHeading5Element.innerText = formatDate(debtor.date)
+
+    const reasonArticleElement = document.createElement('article')
+
+    const reasonHeading4Element = document.createElement('h4')
+    reasonHeading4Element.innerText = 'Reden:'
+
+    const reasonParagraphElement = document.createElement('p')
+    reasonParagraphElement.innerText = debtor.reason
+
+    const backgroundSectionElement = document.createElement('section')
+    backgroundSectionElement.classList.add('background')
+
+    debtorArticleElement.append(amountHeading2Element)
+    debtorArticleElement.append(infoSectionElement)
+    infoSectionElement.append(nameHeading3Element)
+    infoSectionElement.append(dateHeading5Element)
+    infoSectionElement.append(reasonArticleElement)
+    reasonArticleElement.append(reasonHeading4Element)
+    reasonArticleElement.append(reasonParagraphElement)
+    debtorArticleElement.append(backgroundSectionElement)
 
     return debtorArticleElement
+}
+
+/**
+ * @return {Promise<DebtorDataIndexResponse>}
+ */
+function fetchDebtors() {
+    return fetch('data/debtors/index.json').then(res => res.json())
 }

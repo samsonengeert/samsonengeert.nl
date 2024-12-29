@@ -1,0 +1,40 @@
+{
+  "sites": [
+    {
+      "name": "debiteuren",
+      "href": "/debiteuren"
+    },
+    {
+      "name": "eerbetony",
+      "href": "/eerbetony"
+    },
+    {
+      "name": "fr",
+      "href": "/fr"
+    },
+    {
+      "name": "meme",
+      "href": "/meme"
+    },
+    {
+      "name": "status",
+      "href": "/status"
+    },
+    {
+      "name": "wevers",
+      "href": "/wevers"
+    },
+    {
+      "name": "zwagers",
+      "href": "/zwagers"
+    },
+    {
+      "name": "403",
+      "href": "/403"
+    },
+    {
+      "name": "404",
+      "href": "/404"
+    }
+  ]
+}
