@@ -41,10 +41,10 @@ main#sites {
 
 .site {
     display: block;
-    margin: 0.438rem 0 0.313rem;
+    margin: .438rem 0 .313rem;
     text-decoration: none;
     color: inherit;
-    padding: 0.313rem 2rem 0 2rem;
+    padding: .313rem 2rem 0 2rem;
     position: relative;
 }
 

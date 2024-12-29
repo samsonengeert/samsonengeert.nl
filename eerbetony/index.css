@@ -43,7 +43,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0.5rem;
+    padding: .5rem;
     fill: #b8bcc4;
 }
 
@@ -103,7 +103,7 @@ body {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
 }
 
 .date p {
@@ -127,7 +127,7 @@ body {
     max-width: max-content;
     mix-blend-mode: plus-lighter;
     min-width: 56.25rem;
-    opacity: 0.7;
+    opacity: .7;
 }
 
 .champions {
